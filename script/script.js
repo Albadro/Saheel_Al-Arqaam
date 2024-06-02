@@ -8,6 +8,10 @@ document.querySelectorAll(".sqr").forEach((element) => {
 let possibleNexts = allElements;
 let n = 1;
 
+const clickAudio = new Audio("audio/click.wav");
+const clickErrAudio = new Audio("audio/clickErr.wav");
+const evilaughAudio = new Audio("audio/eviLaugh.mp3");
+
 // the called function when a sqr is clicked
 function handleClick(event) {
     function getPossibleNexts(id) {
@@ -66,19 +70,22 @@ function handleClick(event) {
     const id = event.target.id;
     const element = document.getElementById(id);
     if (possibleNexts.includes(id)) {
+        clickAudio.play();
         element.innerHTML = n;
         n++;
         prevElements.push(id);
         possibleNexts = getPossibleNexts(id);
         if (n == 26) {
             // win animation
-            console.log("you won!");
+            // console.log("you won!");
         } else if (possibleNexts.length === 0) {
             //lose animation
-            console.log("you lost!");
+            evilaughAudio.play();
+            // console.log("you lost!");
         }
     } else {
         //refused animation
+        clickErrAudio.play();
         console.log("refused!");
     }
 }
