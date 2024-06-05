@@ -12,10 +12,15 @@ body {
     align-items: center;
     height: 100vh;
 }
+.content {
+    display: flex;
+    gap: 0.3rem;
+}
 .game-box {
     display: grid;
     width: 100%;
-    grid-template: repeat(5, 4.2rem) / repeat(5, 4.2rem);
+    grid-template: repeat(5, 3.7rem) / repeat(5, 3.7rem);
+    gap: 0.5rem;
     justify-content: center;
     align-content: center;
 }
@@ -31,7 +36,28 @@ body {
     justify-content: center;
     align-items: center;
 }
+.ctrl-box {
+    width: 3.7rem;
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr;
+    gap: inherit;
+    grid-auto-rows: max-content;
+}
 
+.ctrl-box > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7.5%;
+    background-color: rgb(132, 172, 144);
+    color: yellow;
+    overflow: hidden;
+    overflow-y: hidden;
+    max-height: auto;
+}
+i {
+    font-size: 35px;
+}
 /* @media (min-width: 1001px) {
     .sqr {
         width: 4.4rem;
