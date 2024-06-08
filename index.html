@@ -3,19 +3,26 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Game-name</title>
+        <title>صهيل الأرقام</title>
         <!-- main css file -->
         <link rel="stylesheet" href="style/style.css" />
         <!-- fontawesome.com css file -->
-        <link rel="stylesheet" href="style/solid.min.css" />
-        <link rel="stylesheet" href="style/fontawesome.min.css" />
+        <link rel="stylesheet" href="style/all.min.css" />
     </head>
     <body>
-        <div class="content">
+        <header>
+            <article>
+                <h1>صهيل الأرقام</h1>
+            </article>
+        </header>
+        <main>
+            <!-- <div class="container"> -->
             <div class="ctrl-box">
                 <div id="reset"><i class="fa-solid fa-broom"></i></div>
                 <div id="undo"><i class="fa-solid fa-rotate-left"></i></div>
-                <div id="redo"><i class="fa-solid fa-rotate-right"></i></div>
+                <div id="redo">
+                    <i class="fa-solid fa-rotate-right"></i>
+                </div>
             </div>
             <div class="game-box">
                 <div class="sqr" id="a1"></div>
@@ -44,7 +51,39 @@
                 <div class="sqr" id="e4"></div>
                 <div class="sqr" id="e5"></div>
             </div>
-        </div>
+            <!-- </div> -->
+        </main>
+        <footer>
+            <hr />
+            <article>
+                <p class="ps">
+                    هذا الموقع يدعم المقاومة والقضية الفلسطينية
+                    <img src="pics/palestinemap.png" alt="free Palestine" />
+                </p>
+                <p class="personal">برمجة وتطوير: <span>البدر محمد</span></p>
+                <p class="contact">
+                    <span>تواصل معنا</span> |
+                    <a
+                        target="_blank"
+                        href="mailto:albadrmohammad.dev@gmail.com"
+                        ><i class="fa-solid fa-at"></i
+                    ></a>
+                    |
+                    <a target="_blank" href="https://github.com/Albadro"
+                        ><i class="fa-brands fa-github"></i
+                    ></a>
+                    |
+                    <a
+                        target="_blank"
+                        href="https://discord.com/users/1083794972052045824"
+                        ><i class="fa-brands fa-discord"></i
+                    ></a>
+                </p>
+                <p class="copyright">
+                    &copy; 2024 لعبة صهيل الأرقام. جميع الحقوق محفوظة
+                </p>
+            </article>
+        </footer>
         <script src="script/script.js"></script>
     </body>
 </html>
