@@ -10,27 +10,36 @@ body {
     direction: rtl;
     height: 100vh;
     height: 100dvh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) repeat(8, 2fr) repeat(2, 1fr);
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+        ". . h h h h h h h h . ."
+        "sr sr h h h h h h h h sl sl"
+        "sr sr . m m m m m m . sl sl"
+        "f f f f f f f f f f f f";
 }
 article {
     color: #fff;
 }
 
+header {
+    grid-area: h;
+}
 header > article {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1rem;
-    margin: 3rem 0 2rem 0;
+    margin: 2.4rem 0 2rem 0;
 }
 header > article > h1 {
     font-size: 5rem;
     text-align: center;
 }
 main {
-    justify-self: flex-start;
+    grid-area: m;
+    align-self: flex-start;
     display: grid;
     grid-template-columns: auto auto;
     gap: 0.45rem;
@@ -81,7 +90,24 @@ main i {
     font-size: 35px;
 }
 
+aside.right {
+    grid-area: sr;
+    border-radius: 50% 0 0 50%;
+}
+aside.left {
+    grid-area: sl;
+    border-radius: 0 50% 50% 0;
+}
+aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(132, 172, 144);
+    padding: 1rem;
+}
+
 footer {
+    grid-area: f;
     margin: 2rem auto 0.1rem;
     width: 90%;
 }
