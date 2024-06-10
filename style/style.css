@@ -1,3 +1,36 @@
+/* fonts */
+
+@font-face {
+    font-family: "Aref Ruqaa Ink";
+    src: url(fonts/ArefRuqaaInk-Regular.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+.ruqqa-Ink {
+    font-family: "Aref Ruqaa Ink";
+    filter: invert(1);
+    color: var(--main-inverted);
+}
+@font-face {
+    font-family: "Marhey";
+    src: url(fonts/Marhey-VariableFont_wght.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* general styling and vars */
+
+:root {
+    --lightest: hsl(185, 70%, 85%);
+    --main: hsl(185, 75%, 50%);
+    --main-inverted: rgb(223, 48, 32);
+    --dark-desaturated: hsl(185, 42.5%, 40%);
+    --dark: hsl(185, 77%, 40%);
+    --darker: hsl(185, 82%, 23%);
+    --darkest: hsl(185, 88%, 10%);
+    /* --two-old-colors: rgb(132, 172, 144); 
+    hsl(185, 74%, 53%)*/
+}
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +39,7 @@
     user-select: none;
 }
 body {
-    background-color: rgb(59, 66, 75);
+    background-color: var(--darkest);
     direction: rtl;
     height: 100vh;
     height: 100dvh;
@@ -20,8 +53,11 @@ body {
         "f f f f f f f f f f f f";
 }
 article {
-    color: #fff;
+    color: var(--lightest);
+    font-family: "Marhey";
 }
+
+/* header */
 
 header {
     grid-area: h;
@@ -30,23 +66,29 @@ header > article {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
-    margin: 2.4rem 0 2rem 0;
+    margin: 1rem 0 2rem 0;
 }
 header > article > h1 {
     font-size: 5rem;
     text-align: center;
 }
+
+/* main */
+
 main {
     grid-area: m;
     align-self: flex-start;
+    padding-top: 1rem;
     display: grid;
     grid-template-columns: auto auto;
     gap: 0.45rem;
     justify-content: center;
     align-content: center;
+    text-shadow: 0 0 10px var(--main), 0 0 15px var(--main),
+        0 0 20px var(--main), 0 0 25px var(--dark), 0 0 20px var(--darkest);
 }
 .game-box {
+    font-family: "Marhey";
     display: grid;
     width: fit-content;
     grid-template: repeat(5, 3.7rem) / repeat(5, 3.7rem);
@@ -59,12 +101,13 @@ main {
     width: 3.7rem;
     height: 3.7rem;
     border-radius: 7.5%;
-    background-color: #fff;
     justify-self: center;
     align-self: center;
     font-size: 2rem;
     justify-content: center;
     align-items: center;
+    background-color: var(--darker);
+    color: var(--main);
 }
 .ctrl-box {
     width: fit-content;
@@ -75,20 +118,21 @@ main {
     justify-content: center;
     align-items: center;
 }
-
 .ctrl-box > * {
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 7.5%;
-    background-color: rgb(132, 172, 144);
-    color: yellow;
+    background-color: var(--dark);
     height: 100%;
     padding: 0.45rem;
 }
 main i {
     font-size: 35px;
+    color: var(--darkest);
 }
+
+/* aside */
 
 aside.right {
     grid-area: sr;
@@ -102,45 +146,64 @@ aside {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(132, 172, 144);
+    background-color: var(--dark-desaturated);
     padding: 1rem;
 }
+aside article {
+    color: var(--darkest);
+}
+
+/* footer */
 
 footer {
     grid-area: f;
     margin: 2rem auto 0.1rem;
     width: 90%;
+    font-size: 0.8rem;
 }
 footer > hr {
-    background-color: #fff;
+    background-color: var(--darker);
     height: 0.1rem;
-    margin: 0 2%;
 }
 footer > article {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding-bottom: 0.25em;
 }
 footer > article p {
-    padding: 0.5rem 0.5rem 0 0.5rem;
+    padding: 0.5em 0.5em 0 0.5em;
     margin: 0 1rem;
+    word-spacing: 0.1em;
 }
 footer p.ps {
     position: relative;
 }
-p.ps img {
+footer p.ps img {
     width: 1rem;
     position: absolute;
     bottom: 0;
     left: -5%;
     z-index: 10;
 }
-/* @media (min-width: 1001px) {
-    .sqr {
-        width: 4.4rem;
-        height: 4.4rem;
-    }
-    .game-box {
-        grid-template: repeat(5, 5.1rem) / repeat(5, 5.1rem);
-    }
-} */
+footer p.personal {
+    position: relative;
+    margin-left: 4em;
+}
+footer span.name {
+    position: absolute;
+    width: max-content;
+    padding-right: 0.2em;
+    font-size: 1.5em;
+    word-spacing: -0.35em;
+    letter-spacing: 0.01em;
+    bottom: -1%;
+    text-shadow: 0 0 5px var(--main-inverted), 0 0 10px var(--main-inverted);
+}
+footer i {
+    color: var(--main);
+}
+.copyright-symbol {
+    font-family: initial;
+    /* font-size: 1.2rem; */
+}
