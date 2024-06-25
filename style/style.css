@@ -52,11 +52,15 @@ body {
         "sr sr . m m m m m m . sl sl"
         "f f f f f f f f f f f f";
 }
-article {
+article,
+p {
     color: var(--lightest);
     font-family: "Marhey";
 }
-
+a {
+    text-decoration: none;
+    color: inherit;
+}
 /* header */
 
 header {
@@ -80,12 +84,12 @@ main {
     align-self: flex-start;
     padding-top: 1rem;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: min-content auto auto;
     gap: 0.45rem;
     justify-content: center;
     align-content: center;
-    text-shadow: 0 0 10px var(--main), 0 0 15px var(--main),
-        0 0 20px var(--main), 0 0 25px var(--dark), 0 0 20px var(--darkest);
+    text-shadow: 0 0 10px var(--main), 0 0 20px var(--main),
+        0 0 30px var(--main), 0 0 40px var(--main);
 }
 .game-box {
     font-family: "Marhey";
@@ -184,7 +188,7 @@ footer p.ps img {
     position: absolute;
     bottom: 0;
     left: -5%;
-    z-index: 10;
+    z-index: 3;
 }
 footer p.personal {
     position: relative;
@@ -206,4 +210,73 @@ footer i {
 .copyright-symbol {
     font-family: initial;
     /* font-size: 1.2rem; */
+}
+
+/* overlay (for win & lose) */
+.overlay {
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(117, 253, 253, 0.33);
+    animation: opacity 500ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.overlay .lose-box,
+.overlay .win-box {
+    width: 500px;
+    height: 300px;
+    /* u can use clam here, media queries dev */
+    border-radius: 7.5%;
+    text-align: center;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.overlay h2 {
+    font-size: 2.5rem;
+}
+article.code {
+    font-size: 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.3rem;
+    margin: 0.2rem;
+    position: relative;
+}
+article.code .hovery {
+    background-color: var(--darker);
+    padding: 0.1rem;
+    font-size: 0.9em;
+    border-radius: 7.5%;
+    writing-mode: initial;
+    width: max-content;
+    position: absolute;
+    right: 1.25rem;
+    display: none;
+}
+.hovery::before {
+    content: "";
+    display: block;
+    border-color: transparent transparent transparent var(--darker);
+    border-style: solid;
+    border-width: 0.5rem;
+    position: absolute;
+    top: -0.01rem;
+    right: -1rem;
+}
+article.code:hover .hovery {
+    display: block;
+}
+main article.code {
+    writing-mode: vertical-rl;
+}
+.overlay,
+.overlay > * {
+    display: none;
 }
