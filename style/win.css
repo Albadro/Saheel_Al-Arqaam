@@ -18,7 +18,11 @@
         opacity: 1;
     }
 }
+.overlay {
+    display: flex;
+}
 .overlay .win-box {
+    display: flex;
     position: relative;
     padding: 1.5rem;
     background-color: var(--darkest);

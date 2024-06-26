@@ -36,9 +36,11 @@ main i {
         0 0 20px var(--main), 0 0 25px var(--lightest), 0 0 20px var(--lightest);
 }
 .overlay {
+    display: flex;
     animation: blur 1880ms linear 0ms 1;
 }
 .overlay .lose-box {
+    display: flex;
     filter: invert(1);
     background-color: var(--main-inverted);
 }

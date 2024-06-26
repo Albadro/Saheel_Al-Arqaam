@@ -22,9 +22,9 @@ document.getElementById("closeLose").addEventListener("click", () => {
 });
 document.getElementById("tryAgain").addEventListener("click", tryAgain);
 document.getElementById("closewin").addEventListener("click", () => {
-    // doubled to solve an unkown-reason-problem
-    closeOverlay("win");
-    closeOverlay("win");
+    try {
+        closeOverlay("win");
+    } catch {}
     const main = document.querySelector("main");
     const codeArticle = document.getElementById("codeArticle");
     main.appendChild(codeArticle);
@@ -89,9 +89,11 @@ function sqrClick(event) {
     const element = document.getElementById(id);
     if (possibleNexts.includes(id)) {
         n++;
-        if (n != 25) {
-            clickAudio.play();
-        }
+        clickAudio.play();
+        element.classList.add("click");
+        setTimeout(() => {
+            element.classList.remove("click");
+        }, 60);
         element.innerText = n;
         prevSqrs.push(id);
         possibleNexts = getPossibleNexts(id);
@@ -169,9 +171,11 @@ function sqrClick(event) {
             evilaughAudio.play();
         }
     } else {
-        //refused animation
         clickErrAudio.play();
-        // console.log("refused!");
+        element.classList.add("click-err");
+        setTimeout(() => {
+            element.classList.remove("click-err");
+        }, 358);
     }
     // the following is to remove past 'undoes' when the event object is real not 'fakeEvent' from 'redo' function cuz the real event from 'addEventListener' has a 'isTrusted' property which has the vlaue True
     if (event.isTrusted) {
@@ -234,4 +238,8 @@ function copyCodeText(event) {
     tempTextArea.select();
     document.execCommand("copy");
     document.body.removeChild(tempTextArea);
+}
+function fwin() {
+    n = 24;
+    sqrClick({ target: { id: "a1" } });
 }

@@ -1,3 +1,13 @@
+@keyframes clickErr {
+    50% {
+        background-color: var(--main-inverted);
+    }
+}
+@keyframes click {
+    50% {
+        background-color: var(--main);
+    }
+}
 /* fonts */
 
 @font-face {
@@ -88,8 +98,6 @@ main {
     gap: 0.45rem;
     justify-content: center;
     align-content: center;
-    text-shadow: 0 0 10px var(--main), 0 0 20px var(--main),
-        0 0 30px var(--main), 0 0 40px var(--main);
 }
 .game-box {
     font-family: "Marhey";
@@ -99,6 +107,8 @@ main {
     gap: 0.5rem;
     justify-content: center;
     align-content: center;
+    text-shadow: 0 0 10px var(--main), 0 0 20px var(--main),
+        0 0 30px var(--main), 0 0 40px var(--main);
 }
 .sqr {
     display: flex;
@@ -112,6 +122,13 @@ main {
     align-items: center;
     background-color: var(--darker);
     color: var(--main);
+    transition: background-color 358ms;
+}
+.click-err {
+    animation: clickErr 358ms linear;
+}
+.click {
+    animation: click 60ms linear;
 }
 .ctrl-box {
     width: fit-content;
@@ -222,7 +239,6 @@ footer i {
     height: 100%;
     background-color: rgba(117, 253, 253, 0.33);
     animation: opacity 500ms;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -234,7 +250,6 @@ footer i {
     border-radius: 7.5%;
     text-align: center;
     padding: 1.5rem;
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
