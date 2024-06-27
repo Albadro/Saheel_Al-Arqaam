@@ -10,60 +10,6 @@
         <link rel="stylesheet" href="style/style.css" />
     </head>
     <body>
-        <!-- overlay (win & lose styling) -->
-
-        <div class="overlay">
-            <div id="lose" class="lose-box">
-                <i id="closeLose" class="fa-solid fa-xmark close"></i>
-                <article>
-                    <h2>خسرت كما هو متوقع</h2>
-                    <p>ومن المستبعد أن لا ترى هذا مرة أخرى</p>
-                </article>
-                <div id="tryAgain" class="reset-btn"><p>أعد المحاولة</p></div>
-            </div>
-            <div id="win" class="win-box">
-                <i id="closewin" class="fa-solid fa-xmark close"></i>
-                <article class="main">
-                    <h2>تهانينا، لقد فزت!</h2>
-                    <p>احتفظ برقم التشفير</p>
-                </article>
-                <section class="game-image" id="gameImage">
-                    <div class="sqr" id="GIa1"></div>
-                    <div class="sqr" id="GIa2"></div>
-                    <div class="sqr" id="GIa3"></div>
-                    <div class="sqr" id="GIa4"></div>
-                    <div class="sqr" id="GIa5"></div>
-                    <div class="sqr" id="GIb1"></div>
-                    <div class="sqr" id="GIb2"></div>
-                    <div class="sqr" id="GIb3"></div>
-                    <div class="sqr" id="GIb4"></div>
-                    <div class="sqr" id="GIb5"></div>
-                    <div class="sqr" id="GIc1"></div>
-                    <div class="sqr" id="GIc2"></div>
-                    <div class="sqr" id="GIc3">!</div>
-                    <div class="sqr" id="GIc4">14</div>
-                    <div class="sqr" id="GIc5">15</div>
-                    <div class="sqr" id="GId1">16</div>
-                    <div class="sqr" id="GId2">17</div>
-                    <div class="sqr" id="GId3">18</div>
-                    <div class="sqr" id="GId4">19</div>
-                    <div class="sqr" id="GId5">20</div>
-                    <div class="sqr" id="GIe1">21</div>
-                    <div class="sqr" id="GIe2">22</div>
-                    <div class="sqr" id="GIe3">23</div>
-                    <div class="sqr" id="GIe4">24</div>
-                    <div class="sqr" id="GIe5">25</div>
-                </section>
-                <article id="codeArticle" class="code">
-                    <p>رقم التشفير:</p>
-                    <p id="DT"></p>
-                    <p>|</p>
-                    <p id="code"></p>
-                    <div class="hovery">انقر للنسخ</div>
-                </article>
-            </div>
-        </div>
-
         <!-- header -->
 
         <header>
@@ -71,6 +17,14 @@
                 <h1 class="ruqqa-Ink">صهيل الأرقام</h1>
             </article>
         </header>
+        <div class="HT">
+            <div class="HToverlay"></div>
+            <i class="fa-solid fa-question"></i>
+            <p>
+                هدف اللعبة هو أن تملأ المربعات بالأرقام من 1 إلى 25، ولكن مع
+                ملاحظة بسيطة 😉، كل رقم يفصله عن سابقه كنقلة الحصان في الشطرنج
+            </p>
+        </div>
 
         <!-- right aside -->
 
@@ -184,6 +138,60 @@
                 </p>
             </article>
         </footer>
+
+        <!-- overlay (win & lose styling) -->
+
+        <div class="overlay">
+            <div id="lose" class="lose-box">
+                <i id="closeLose" class="fa-solid fa-xmark close"></i>
+                <article>
+                    <h2>خسرت كما هو متوقع</h2>
+                    <p>ومن المستبعد أن لا ترى هذا مرة أخرى</p>
+                </article>
+                <div id="tryAgain" class="reset-btn"><p>أعد المحاولة</p></div>
+            </div>
+            <div id="win" class="win-box">
+                <i id="closewin" class="fa-solid fa-xmark close"></i>
+                <article class="main">
+                    <h2>تهانينا، لقد فزت!</h2>
+                    <p>احتفظ برقم التشفير</p>
+                </article>
+                <section class="game-image" id="gameImage">
+                    <div class="sqr" id="GIa1"></div>
+                    <div class="sqr" id="GIa2"></div>
+                    <div class="sqr" id="GIa3"></div>
+                    <div class="sqr" id="GIa4"></div>
+                    <div class="sqr" id="GIa5"></div>
+                    <div class="sqr" id="GIb1"></div>
+                    <div class="sqr" id="GIb2"></div>
+                    <div class="sqr" id="GIb3"></div>
+                    <div class="sqr" id="GIb4"></div>
+                    <div class="sqr" id="GIb5"></div>
+                    <div class="sqr" id="GIc1"></div>
+                    <div class="sqr" id="GIc2"></div>
+                    <div class="sqr" id="GIc3">!</div>
+                    <div class="sqr" id="GIc4">14</div>
+                    <div class="sqr" id="GIc5">15</div>
+                    <div class="sqr" id="GId1">16</div>
+                    <div class="sqr" id="GId2">17</div>
+                    <div class="sqr" id="GId3">18</div>
+                    <div class="sqr" id="GId4">19</div>
+                    <div class="sqr" id="GId5">20</div>
+                    <div class="sqr" id="GIe1">21</div>
+                    <div class="sqr" id="GIe2">22</div>
+                    <div class="sqr" id="GIe3">23</div>
+                    <div class="sqr" id="GIe4">24</div>
+                    <div class="sqr" id="GIe5">25</div>
+                </section>
+                <article id="codeArticle" class="code">
+                    <p>رقم التشفير:</p>
+                    <p id="DT"></p>
+                    <p>|</p>
+                    <p id="code"></p>
+                    <div class="hovery">انقر للنسخ</div>
+                </article>
+            </div>
+        </div>
 
         <!-- script -->
 
