@@ -224,7 +224,7 @@ function closeOverlay(file) {
     document.querySelector(`link[href="style/${file}.css"]`).remove();
 }
 function tryAgain() {
-    closeOverlay();
+    closeOverlay("lose");
     reset();
 }
 function copyCodeText(event) {
