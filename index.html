@@ -1,184 +1,1 @@
-<!DOCTYPE html>
-<html lang="ar">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>صهيل الأرقام</title>
-        <!-- fontawesome.com css file -->
-        <link rel="stylesheet" href="style/all.min.css" />
-        <!-- css -->
-        <link rel="stylesheet" href="style/style.css" />
-        <!-- favicon -->
-        <link rel="icon" href="pics/tfavicon.ico" type="image/x-icon" />
-    </head>
-    <body>
-        <!-- header -->
-
-        <header>
-            <article>
-                <h1 class="ruqqa-Ink">صهيل الأرقام</h1>
-            </article>
-        </header>
-        <div class="HT">
-            <div class="HToverlay"></div>
-            <i class="fa-solid fa-question"></i>
-            <p>
-                هدف اللعبة هو أن تملأ المربعات بالأرقام من 1 إلى 25، ولكن مع
-                ملاحظة بسيطة 😉، كل رقم يفصله عن سابقه كنقلة الحصان في الشطرنج
-            </p>
-        </div>
-
-        <!-- right aside -->
-
-        <aside class="right">
-            <article><p>مساحة إعلانية</p></article>
-        </aside>
-
-        <!-- main -->
-
-        <main>
-            <div class="ctrl-box">
-                <div id="reset"><i class="fa-solid fa-broom"></i></div>
-                <div id="undo"><i class="fa-solid fa-rotate-left"></i></div>
-                <div id="redo">
-                    <i class="fa-solid fa-rotate-right"></i>
-                </div>
-            </div>
-            <div class="game-box">
-                <div class="sqr" id="a1"></div>
-                <div class="sqr" id="a2"></div>
-                <div class="sqr" id="a3"></div>
-                <div class="sqr" id="a4"></div>
-                <div class="sqr" id="a5"></div>
-                <div class="sqr" id="b1"></div>
-                <div class="sqr" id="b2"></div>
-                <div class="sqr" id="b3"></div>
-                <div class="sqr" id="b4"></div>
-                <div class="sqr" id="b5"></div>
-                <div class="sqr" id="c1"></div>
-                <div class="sqr" id="c2"></div>
-                <div class="sqr" id="c3"></div>
-                <div class="sqr" id="c4"></div>
-                <div class="sqr" id="c5"></div>
-                <div class="sqr" id="d1"></div>
-                <div class="sqr" id="d2"></div>
-                <div class="sqr" id="d3"></div>
-                <div class="sqr" id="d4"></div>
-                <div class="sqr" id="d5"></div>
-                <div class="sqr" id="e1"></div>
-                <div class="sqr" id="e2"></div>
-                <div class="sqr" id="e3"></div>
-                <div class="sqr" id="e4"></div>
-                <div class="sqr" id="e5"></div>
-            </div>
-        </main>
-
-        <!-- left aside -->
-
-        <aside class="left">
-            <article><p>مساحة إعلانية</p></article>
-        </aside>
-
-        <!-- footer -->
-
-        <footer>
-            <hr />
-            <article>
-                <div class="wrapper">
-                    <p class="ps">
-                        نقف في صف المقاومة والقضية الفلسطينية
-                        <img src="pics/palestinemap.png" alt="free Palestine" />
-                    </p>
-                    <p class="personal">
-                        برمجة وتطوير:
-                        <span class="name ruqqa-Ink">البدر محمد</span>
-                    </p>
-                </div>
-                <div class="wrapper">
-                    <p class="contact">
-                        تواصل معنا |
-                        <a
-                            target="_blank"
-                            href="mailto:albadrmohammad.dev@gmail.com"
-                            ><i class="fa-solid fa-at"></i
-                        ></a>
-                        |
-                        <a target="_blank" href="https://github.com/Albadro"
-                            ><i class="fa-brands fa-github"></i
-                        ></a>
-                        |
-                        <a
-                            target="_blank"
-                            href="https://discord.com/users/1083794972052045824"
-                            ><i class="fa-brands fa-discord"></i
-                        ></a>
-                    </p>
-                    <p class="copyright">
-                        <span class="copyright-symbol">&copy;</span> 2024 لعبة
-                        صهيل الأرقام. جميع الحقوق محفوظة.
-                    </p>
-                </div>
-            </article>
-        </footer>
-
-        <!-- overlay (win & lose styling) -->
-
-        <div class="overlay">
-            <div id="lose" class="lose-box">
-                <i id="closeLose" class="fa-solid fa-xmark close"></i>
-                <article>
-                    <h2>خسرت كما هو متوقع</h2>
-                    <p>ومن المستبعد أن لا ترى هذا مرة أخرى</p>
-                </article>
-                <div id="tryAgain" class="tryAgain-btn">
-                    <p>أعد المحاولة</p>
-                </div>
-            </div>
-            <div id="win" class="win-box">
-                <i id="closewin" class="fa-solid fa-xmark close"></i>
-                <article class="main">
-                    <h2>تهانينا، لقد فزت!</h2>
-                    <p>احتفظ برقم التشفير</p>
-                </article>
-                <section class="game-image" id="gameImage">
-                    <div class="sqr" id="GIa1"></div>
-                    <div class="sqr" id="GIa2"></div>
-                    <div class="sqr" id="GIa3"></div>
-                    <div class="sqr" id="GIa4"></div>
-                    <div class="sqr" id="GIa5"></div>
-                    <div class="sqr" id="GIb1"></div>
-                    <div class="sqr" id="GIb2"></div>
-                    <div class="sqr" id="GIb3"></div>
-                    <div class="sqr" id="GIb4"></div>
-                    <div class="sqr" id="GIb5"></div>
-                    <div class="sqr" id="GIc1"></div>
-                    <div class="sqr" id="GIc2"></div>
-                    <div class="sqr" id="GIc3">!</div>
-                    <div class="sqr" id="GIc4">14</div>
-                    <div class="sqr" id="GIc5">15</div>
-                    <div class="sqr" id="GId1">16</div>
-                    <div class="sqr" id="GId2">17</div>
-                    <div class="sqr" id="GId3">18</div>
-                    <div class="sqr" id="GId4">19</div>
-                    <div class="sqr" id="GId5">20</div>
-                    <div class="sqr" id="GIe1">21</div>
-                    <div class="sqr" id="GIe2">22</div>
-                    <div class="sqr" id="GIe3">23</div>
-                    <div class="sqr" id="GIe4">24</div>
-                    <div class="sqr" id="GIe5">25</div>
-                </section>
-                <article id="codeArticle" class="code">
-                    <p>رقم التشفير:</p>
-                    <p id="DT"></p>
-                    <p>|</p>
-                    <p id="code"></p>
-                    <div class="hovery">انقر للنسخ</div>
-                </article>
-            </div>
-        </div>
-
-        <!-- script -->
-
-        <script src="script/script.js"></script>
-    </body>
-</html>
+<!doctype html><html lang="ar"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>صهيل الأرقام</title><link rel="stylesheet" href="style/all.min.css"><link rel="stylesheet" href="style/style.css"><link rel="icon" href="pics/tfavicon.ico" type="image/x-icon"></head><body><header><article><h1 class="ruqqa-Ink">صهيل الأرقام</h1></article></header><div class="HT"><div class="HToverlay"></div><i class="fa-solid fa-question"></i><p>هدف اللعبة هو أن تملأ المربعات بالأرقام من 1 إلى 25، ولكن مع ملاحظة بسيطة 😉، كل رقم يفصله عن سابقه كنقلة الحصان في الشطرنج</p></div><aside class="right"><article><p>مساحة إعلانية</p></article></aside><main><div class="ctrl-box"><div id="reset"><i class="fa-solid fa-broom"></i></div><div id="undo"><i class="fa-solid fa-rotate-left"></i></div><div id="redo"><i class="fa-solid fa-rotate-right"></i></div></div><div class="game-box"><div class="sqr" id="a1"></div><div class="sqr" id="a2"></div><div class="sqr" id="a3"></div><div class="sqr" id="a4"></div><div class="sqr" id="a5"></div><div class="sqr" id="b1"></div><div class="sqr" id="b2"></div><div class="sqr" id="b3"></div><div class="sqr" id="b4"></div><div class="sqr" id="b5"></div><div class="sqr" id="c1"></div><div class="sqr" id="c2"></div><div class="sqr" id="c3"></div><div class="sqr" id="c4"></div><div class="sqr" id="c5"></div><div class="sqr" id="d1"></div><div class="sqr" id="d2"></div><div class="sqr" id="d3"></div><div class="sqr" id="d4"></div><div class="sqr" id="d5"></div><div class="sqr" id="e1"></div><div class="sqr" id="e2"></div><div class="sqr" id="e3"></div><div class="sqr" id="e4"></div><div class="sqr" id="e5"></div></div></main><aside class="left"><article><p>مساحة إعلانية</p></article></aside><footer><hr><article><div class="wrapper"><p class="ps">نقف في صف المقاومة والقضية الفلسطينية <img src="pics/palestinemap.png" alt="free Palestine"></p><p class="personal">برمجة وتطوير:<span class="name ruqqa-Ink">البدر محمد</span></p></div><div class="wrapper"><p class="contact">تواصل معنا |<a target="_blank" href="mailto:albadrmohammad.dev@gmail.com"><i class="fa-solid fa-at"></i></a>|<a target="_blank" href="https://github.com/Albadro"><i class="fa-brands fa-github"></i></a>|<a target="_blank" href="https://discord.com/users/1083794972052045824"><i class="fa-brands fa-discord"></i></a></p><p class="copyright"><span class="copyright-symbol">&copy;</span>2024 لعبة صهيل الأرقام. جميع الحقوق محفوظة.</p></div></article></footer><div class="overlay"><div id="lose" class="lose-box"><i id="closeLose" class="fa-solid fa-xmark close"></i><article><h2>خسرت كما هو متوقع</h2><p>ومن المستبعد أن لا ترى هذا مرة أخرى</p></article><div id="tryAgain" class="tryAgain-btn"><p>أعد المحاولة</p></div></div><div id="win" class="win-box"><i id="closewin" class="fa-solid fa-xmark close"></i><article class="main"><h2>تهانينا، لقد فزت!</h2><p>احتفظ برقم التشفير</p></article><section class="game-image" id="gameImage"><div class="sqr" id="GIa1"></div><div class="sqr" id="GIa2"></div><div class="sqr" id="GIa3"></div><div class="sqr" id="GIa4"></div><div class="sqr" id="GIa5"></div><div class="sqr" id="GIb1"></div><div class="sqr" id="GIb2"></div><div class="sqr" id="GIb3"></div><div class="sqr" id="GIb4"></div><div class="sqr" id="GIb5"></div><div class="sqr" id="GIc1"></div><div class="sqr" id="GIc2"></div><div class="sqr" id="GIc3">!</div><div class="sqr" id="GIc4">14</div><div class="sqr" id="GIc5">15</div><div class="sqr" id="GId1">16</div><div class="sqr" id="GId2">17</div><div class="sqr" id="GId3">18</div><div class="sqr" id="GId4">19</div><div class="sqr" id="GId5">20</div><div class="sqr" id="GIe1">21</div><div class="sqr" id="GIe2">22</div><div class="sqr" id="GIe3">23</div><div class="sqr" id="GIe4">24</div><div class="sqr" id="GIe5">25</div></section><article id="codeArticle" class="code"><p>رقم التشفير:</p><p id="DT"></p><p>|</p><p id="code"></p><div class="hovery">انقر للنسخ</div></article></div></div><script src="script/script.js"></script></body></html>
