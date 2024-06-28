@@ -37,13 +37,13 @@
 /* general styling and vars */
 
 :root {
-    --lightest: #beeff4;
-    --main: #20cfdf;
+    --lightest: hsl(186, 71%, 85%);
+    --main: hsl(185, 75%, 50%);
     --main-inverted: rgb(223, 48, 32);
     --dark-desaturated: hsl(185, 42.5%, 40%);
     --dark: hsl(185, 77%, 40%);
-    --darker: #0b636b;
-    --darkest: #032c30;
+    --darker: hsl(185, 81%, 23%);
+    --darkest: hsl(185, 88%, 10%);
     /* --two-old-colors: rgb(132, 172, 144); 
     hsl(185, 74%, 53%)*/
 }
